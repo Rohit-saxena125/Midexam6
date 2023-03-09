@@ -1,11 +1,12 @@
 const express = require('express')
 const mongoose = require('mongoose')
+require('dot-env');
 const PORT = process.env.PORT || 3030;
 const Article = require('./Db/article')
 const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
-mongoose.connect('', {
+mongoose.connect('process.env.MONGO_URL', {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
 app.set('view engine', 'ejs')
