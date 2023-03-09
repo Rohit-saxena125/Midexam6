@@ -5,7 +5,7 @@ const Article = require('./Db/article')
 const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
-mongoose.connect('mongodb+srv://rohitsaxena125:gVy92UU3zNj7hMJL@todolist.an2xjva.mongodb.net/Article?retryWrites=true&w=majority', {
+mongoose.connect('', {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
 app.set('view engine', 'ejs')
